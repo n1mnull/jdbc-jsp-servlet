@@ -36,10 +36,6 @@ public class ConnectionExample {
 
         PreparedStatement statement = connection.prepareStatement(sql);
 
-//        statement.setString(1, "bill");
-//        statement.setString(2, "pass");
-//        statement.setString(3, "gates");
-//        statement.setString(4, "bill.gates@gmail.com");
         statement.setString(1, username);
         statement.setString(2, password);
         statement.setString(3, fullname);
@@ -96,7 +92,7 @@ public class ConnectionExample {
         connectionExample.connect();
         try {
 //            connectionExample.createUser("bill","pass","gates","bill.gates@gmail.com");
-            connectionExample.createUser("billy","passw","gates","billy.gates@gmail.com");
+//            connectionExample.createUser("billy","passw","gates","billy.gates@gmail.com");
 
             User user = connectionExample.getUserById(1);
             System.out.println(user.getUsername() + " " + user.getFullname() );
